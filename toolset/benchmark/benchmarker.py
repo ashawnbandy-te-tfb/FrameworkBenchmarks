@@ -650,6 +650,16 @@ class Benchmarker:
         time.sleep(5)
 
         ##########################################################
+        # Remove contents of  /tmp folder
+        ##########################################################
+        try:
+          filelist = [ f for f in os.listdir("/tmp") ]
+	  for f in filelist:
+            os.remove(f)
+        except OSError:
+          print "Failed to remove contents of /tmp directory."
+
+        ##########################################################
         # Save results thus far into the latest results directory
         ##########################################################
 
