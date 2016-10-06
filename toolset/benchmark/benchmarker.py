@@ -658,7 +658,7 @@ class Benchmarker:
             try:
 	      os.remove("/tmp/" + f)
             except OSError as err:
-              print "Failed to remove " + f + " from /tmp directory: " + err
+              print "Failed to remove " + str(f) + " from /tmp directory: " + str(err)
         except OSError:
           print "Failed to remove contents of /tmp directory."
 
