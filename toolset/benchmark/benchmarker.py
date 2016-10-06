@@ -657,8 +657,8 @@ class Benchmarker:
 	  for f in filelist:
             try:
 	      os.remove(f)
-            except OSError:
-              print "Failed to remove" + f + "from /tmp directory."
+            except OSError as err:
+              print "Failed to remove " + f + " from /tmp directory: " + err
         except OSError:
           print "Failed to remove contents of /tmp directory."
 
