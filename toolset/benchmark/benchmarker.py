@@ -658,7 +658,7 @@ class Benchmarker:
             try:
 	      os.remove(f)
             except OSError:
-              out.write(header("Failed to remove %s from /tmp directory." % (f)))
+              print "Failed to remove" + f + "from /tmp directory."
         except OSError:
           print "Failed to remove contents of /tmp directory."
 
